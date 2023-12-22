@@ -12,17 +12,17 @@ AOS.init();
 const App = () => {
   return (
     <>
-      <BlogProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <BlogProvider>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<Blog />} />
             <Route path="/createBlog" element={<CreateBlog />} />
             <Route path="/editBlog" element={<EditBlog />} />
           </Routes>
-        </BrowserRouter>
-      </BlogProvider>
+        </BlogProvider>
+      </BrowserRouter>
     </>
   );
 };

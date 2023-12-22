@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BlogContext = createContext();
 const BlogProvider = ({ children }) => {
@@ -12,26 +12,30 @@ const BlogProvider = ({ children }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-
-  /* const navigate = useNavigate();
-  if (response.status == 200) {
-    navigate("/");
-  } */
+  const navigate = useNavigate();
 
   const CreateBlog = async (e) => {
+    if (!title || !description || !image) {
+      return;
+    }
     e.preventDefault();
     const response = await axios.post(URL, {
       name: title,
       description,
       avatar: image,
     });
-
+    if (response.status == 201) {
+      navigate("/");
+    }
     // Clear input fields
     setTitle("");
     setDescription("");
     setImage("");
-    //console.log(response);
+    console.log(response);
   };
+  //********* */
+
+  
 
   //****************/
   useEffect(() => {
@@ -58,6 +62,7 @@ const BlogProvider = ({ children }) => {
         setTitle,
         setDescription,
         setImage,
+        
       }}
     >
       {children}
