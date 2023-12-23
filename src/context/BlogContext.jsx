@@ -35,8 +35,6 @@ const BlogProvider = ({ children }) => {
   };
   //********* */
 
-  
-
   //****************/
   useEffect(() => {
     const fetchData = async () => {

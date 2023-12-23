@@ -4,7 +4,8 @@ import Title from "../components/Title";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const { data} = useContext(BlogContext);
+  const { data } = useContext(BlogContext);
+
   return (
     <div className="container m-auto px-44 pt-12">
       <Title text={`Blogs`} />
@@ -23,7 +24,6 @@ const Home = () => {
               <h3 className="text-gray-700 truncate">{dat.description}</h3>
               <section className="flex justify-center">
                 <Link
-                  
                   to={`blog/${dat.id}`}
                   className="px-3 py-2 bg-gray-600 w-max text-center text-gray-100 rounded-xl hover:bg-gray-800"
                 >
