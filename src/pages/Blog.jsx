@@ -40,7 +40,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="container m-auto lg:px-44 pt-12">
+    <div className="container m-auto lg:px-44 py-12">
       <Title text={`Blog`} />
       <section className="flex  justify-center items-center pt-12">
         {singleBlog && (
