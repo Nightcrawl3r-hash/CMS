@@ -1,8 +1,5 @@
 
-Certainly! Below is a simplified version of the README.md file with placeholders for you to fill in specific details:
 
-markdown
-Copy code
 # React CRUD App with MockAPI and Tailwind CSS
 
 This is a simple CRUD (Create, Read, Update, Delete) application built using React, MockAPI, and Tailwind CSS. The application allows users to perform basic CRUD operations on a set of mock data.
