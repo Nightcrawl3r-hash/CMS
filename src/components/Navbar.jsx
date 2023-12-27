@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container m-auto px-44 py-4">
-      <ul className="flex justify-between ">
+    <div className="container m-auto grid w-1/2 md:w-1/6 py-4">
+      <ul className="flex justify-between  ">
         <li>
           <Link
             to="/"
@@ -29,14 +29,14 @@ const Navbar = () => {
             Create
           </Link>
         </li>
-        <li>
+     {/*    <li>
           <Link
             to="editBlog"
             className="text-xl font-semibold text-gray-800 uppercase hover:text-[#ff0336] transition-colors ease-linear"
           >
             Edit
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

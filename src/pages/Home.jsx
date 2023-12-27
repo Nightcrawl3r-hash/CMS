@@ -7,10 +7,10 @@ const Home = () => {
   const { data } = useContext(BlogContext);
 
   return (
-    <div className="container m-auto px-44 pt-12">
+    <div className="container m-auto px-2 lg:px-44 pt-12">
       <Title text={`Blogs`} />
 
-      <div className="grid grid-cols-5 gap-8 py-4">
+      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 py-4">
         {data.map((dat) => (
           <section
             className="border border-[#ff0336] flex flex-col rounded-xl overflow-hidden bg-gray-100"

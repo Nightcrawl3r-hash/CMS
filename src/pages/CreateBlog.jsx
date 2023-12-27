@@ -6,10 +6,10 @@ const CreateBlog = () => {
   const { setTitle, setDescription, setImage, CreateBlog } =
     useContext(BlogContext);
   return (
-    <div className="container m-auto px-44 py-8">
+    <div className="container m-auto px-2 lg:px-44 py-8">
       <div className="">
         <Title text={`Create Blog`} />
-        <form onSubmit={CreateBlog} className="flex flex-col gap-6 py-4 px-60">
+        <form onSubmit={CreateBlog} className="flex flex-col gap-6 py-4 md:px-36 lg:px-60">
           <input
             type="text"
             placeholder="Enter title"
